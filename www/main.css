@@ -30,6 +30,10 @@ body {
   margin-bottom: 10px;
 }
 
+.vote-form #error-message {
+  color: red;
+}
+
 /* hide arrows on number inputs */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

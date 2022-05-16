@@ -1,9 +1,0 @@
-add provinces.json validation to vote.php to ensure the passed province id is valid
-
-add error handling to all of our then() clauses in javascript
-.then(result => {
-    ...
-}).catch(err => {
-    // handle error
-    console.error(err);
-})

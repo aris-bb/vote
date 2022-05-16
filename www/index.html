@@ -21,63 +21,77 @@
   <body class="text-center">
     <main class="vote-form">
       <form id="vote-form-element">
-        <h1 class="h3 mb-3 fw-normal">Lütfen bilgilerinizi girin</h1>
+        <h1 class="h3 mb-3 fw-normal" id="main-title">
+          Lütfen bilgilerinizi girin
+        </h1>
 
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="id-number"
-            placeholder="T.C. Kimlik No"
-            type="number"
-            required
-          />
-          <label for="id-number">T.C. Kimlik No</label>
-        </div>
+        <section id="part-1">
+          <div class="form-floating">
+            <input
+              class="form-control"
+              id="id-number"
+              placeholder="T.C. Kimlik No"
+              type="number"
+              required
+            />
+            <label for="id-number">T.C. Kimlik No</label>
+          </div>
 
-        <div class="form-floating">
-          <input class="form-control" id="name" placeholder="Ad" required />
-          <label for="name">Ad</label>
-        </div>
+          <div class="form-floating">
+            <input
+              class="form-control"
+              id="name"
+              placeholder="Ad"
+              uppercase
+              required
+            />
+            <label for="name">Ad</label>
+          </div>
 
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="surname"
-            placeholder="Soyad"
-            required
-          />
-          <label for="surname">Soyad</label>
-        </div>
+          <div class="form-floating">
+            <input
+              class="form-control"
+              id="surname"
+              placeholder="Soyad"
+              uppercase
+              required
+            />
+            <label for="surname">Soyad</label>
+          </div>
 
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="birth-year"
-            placeholder="Doğum yılı"
-            type="number"
-            required
-          />
-          <label for="birth-year">Doğum yılı</label>
-        </div>
+          <div class="form-floating">
+            <input
+              class="form-control"
+              id="birth-year"
+              placeholder="Doğum yılı"
+              type="number"
+              required
+            />
+            <label for="birth-year">Doğum yılı</label>
+          </div>
+        </section>
 
-        <p>Diğer veriler:</p>
+        <section id="vote-options"></section>
 
-        <div class="form-floating">
-          <select class="form-select" id="province" required>
-            <option value="">...</option>
-          </select>
-          <label for="province">Şehir</label>
-        </div>
+        <section id="internal-data">
+          <p>Diğer veriler:</p>
+          <div class="form-floating">
+            <select class="form-select" id="province" required>
+              <option value="">...</option>
+            </select>
+            <label for="province">Şehir</label>
+          </div>
 
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="terminal-id"
-            placeholder="Terminal ID"
-            required
-          />
-          <label for="terminal-id">Terminal ID</label>
-        </div>
+          <div class="form-floating">
+            <input
+              class="form-control"
+              id="terminal-id"
+              placeholder="Terminal ID"
+              required
+            />
+            <label for="terminal-id">Terminal ID</label>
+          </div>
+        </section>
 
         <button
           class="w-100 btn btn-lg btn-primary"
@@ -86,6 +100,8 @@
         >
           Kontrol et
         </button>
+
+        <p id="error-message"></p>
       </form>
     </main>
   </body>

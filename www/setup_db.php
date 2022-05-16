@@ -20,7 +20,7 @@ if (!$conn->query($sql)) {
 $conn->select_db($db_credentials->db_name);
 
 $sql = "CREATE TABLE votes (
-    identification_number INT NOT NULL,
+    identification_number BIGINT NOT NULL,
     forename TEXT NOT NULL,
     surname TEXT NOT NULL,
     birth_year INT NOT NULL,
@@ -37,7 +37,7 @@ if (!$conn->query($sql)) {
 
 $sql = "CREATE TABLE invalid_votes (
   id INT NOT NULL AUTO_INCREMENT,
-  identification_number INT NOT NULL,
+  identification_number BIGINT NOT NULL,
   forename TEXT NOT NULL,
   surname TEXT NOT NULL,
   birth_year INT NOT NULL,
@@ -46,7 +46,6 @@ $sql = "CREATE TABLE invalid_votes (
   voted_for INT NOT NULL,
   ip TEXT NOT NULL,
   is_valid_person INT,
-  extra_args TEXT,
   PRIMARY KEY (id)
 );";
 
